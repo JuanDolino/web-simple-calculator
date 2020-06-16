@@ -1,4 +1,4 @@
-# Web-simple-calculator-react
+# simple-calculator-react
 
 A simple calculator built using **React**.
 
