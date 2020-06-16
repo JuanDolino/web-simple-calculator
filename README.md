@@ -8,7 +8,7 @@ Some useful scripts to execute the project
 
 ### yarn
 
-Use this command to download the neccessary packages to execute the project.
+Use this command to download the needed packages to execute the project.
 
 ### yarn start
 
