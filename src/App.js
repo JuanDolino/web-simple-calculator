@@ -1,15 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import Calculator from './components/Calculator';
+import Display from './components/Display';
 
-import './global.css'
+import Button from './components/Button';
 
-function App() {
-  return (
-    <div className="App">
-      <Calculator/>
-    </div>
-  );
+import operate from './logic/operate';
+
+import './App.css';
+
+class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      number: null,
+      total: null,
+      operation: null
+    }
+
+  }
+
+  calc = (buttonName) => {
+    this.setState(operate(this.state, buttonName));
+  }
+  
+  render() {
+    return (
+      <div className="App">
+        <div className="box">
+          <div className="calculator">
+            <Display value={this.state.number || this.state.total || "0"} />
+            <Button calculate={this.calc}/>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
